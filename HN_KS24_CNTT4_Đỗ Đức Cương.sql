@@ -47,3 +47,16 @@ insert 	into book(reader_id,book_id,borrow_date,return_date) value
 (1,101,'2024-09-15'),
 (1,102,'2024-09-15','2024-09-25'),
 (2,103,'2024-09-18'); 
+
+UPDATE borrow
+SET return_date = '2024-10-01'
+WHERE reader_id = 1;
+
+
+UPDATE book
+SET publish_year = 2023
+WHERE publish_year >= 2021;
+
+DELETE FROM borrow
+WHERE borrow_date < '2024-09-18';
+
